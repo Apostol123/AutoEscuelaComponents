@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AutoEscuelaComponents_Example' do
+  pod 'AutoEscuelaComponents', :path => '../'
+
+  target 'AutoEscuelaComponents_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
