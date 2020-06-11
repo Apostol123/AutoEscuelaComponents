@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2171CAAF4788F7FE1966D793 /* AutoEscuelaComponents.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AutoEscuelaComponents.podspec; path = ../AutoEscuelaComponents.podspec; sourceTree = "<group>"; };
+		2171CAAF4788F7FE1966D793 /* AutoEscuelaComponents.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AutoEscuelaComponents.podspec; path = ../AutoEscuelaComponents.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		535C50D9BAD18BC4D9CACFD5 /* Pods-AutoEscuelaComponents_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoEscuelaComponents_Example.debug.xcconfig"; path = "Target Support Files/Pods-AutoEscuelaComponents_Example/Pods-AutoEscuelaComponents_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AutoEscuelaComponents_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoEscuelaComponents_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,12 +41,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		9E690DBF7977DF2061AD3C6B /* Pods-AutoEscuelaComponents_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoEscuelaComponents_Tests.release.xcconfig"; path = "Target Support Files/Pods-AutoEscuelaComponents_Tests/Pods-AutoEscuelaComponents_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A0AFD43D6F932C41A84DE64F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A0AFD43D6F932C41A84DE64F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A1968120E7DD146EE8C0EB56 /* Pods_AutoEscuelaComponents_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoEscuelaComponents_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5022154162DE1B398BF52C3 /* Pods-AutoEscuelaComponents_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoEscuelaComponents_Example.release.xcconfig"; path = "Target Support Files/Pods-AutoEscuelaComponents_Example/Pods-AutoEscuelaComponents_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D7204AD6743849723A722523 /* Pods_AutoEscuelaComponents_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoEscuelaComponents_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC74E1E2D8E73D5EB29FCD1A /* Pods-AutoEscuelaComponents_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoEscuelaComponents_Tests.debug.xcconfig"; path = "Target Support Files/Pods-AutoEscuelaComponents_Tests/Pods-AutoEscuelaComponents_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F25EDBD3336F23D5D3E3D9BB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F25EDBD3336F23D5D3E3D9BB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				DC74E1E2D8E73D5EB29FCD1A /* Pods-AutoEscuelaComponents_Tests.debug.xcconfig */,
 				9E690DBF7977DF2061AD3C6B /* Pods-AutoEscuelaComponents_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

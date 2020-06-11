@@ -1,0 +1,16 @@
+PODS:
+  - AutoEscuelaComponents (0.1.0)
+
+DEPENDENCIES:
+  - AutoEscuelaComponents (from `../`)
+
+EXTERNAL SOURCES:
+  AutoEscuelaComponents:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AutoEscuelaComponents: 9303cbefdae1f070976545af23bddf3f8411533a
+
+PODFILE CHECKSUM: 2cb685f468f22bef248ee1aa2482ca7652eaac4e
+
+COCOAPODS: 1.9.1

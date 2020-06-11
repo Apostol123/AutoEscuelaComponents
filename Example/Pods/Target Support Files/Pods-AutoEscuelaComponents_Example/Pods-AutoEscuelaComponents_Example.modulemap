@@ -1,0 +1,6 @@
+framework module Pods_AutoEscuelaComponents_Example {
+  umbrella header "Pods-AutoEscuelaComponents_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

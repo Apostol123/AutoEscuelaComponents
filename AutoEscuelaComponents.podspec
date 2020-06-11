@@ -28,9 +28,13 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Apostol123/AutoEscuelaComponents.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
-  s.source_files = 'AutoEscuelaComponents/Classes/**/*'
+  s.source_files = 'Classes/**/*.swift'
+  s.swift_version = '5.0'
+  s.platforms = {
+      "ios": "13.0"
+  }
   
   # s.resource_bundles = {
   #   'AutoEscuelaComponents' => ['AutoEscuelaComponents/Assets/*.png']
