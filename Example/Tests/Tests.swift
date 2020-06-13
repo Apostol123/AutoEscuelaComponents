@@ -1,5 +1,4 @@
 import XCTest
-import AutoEscuelaComponents
 
 class Tests: XCTestCase {
     

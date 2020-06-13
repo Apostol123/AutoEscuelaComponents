@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AutoEscuelaComponents'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A short description of AutoEscuelaComponents.'
 
 # This description is used to generate tags and improve search results.
@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'Classes/**/*.swift'
   s.swift_version = '5.0'
   s.platforms = {
-      "ios": "13.0"
+      "ios": "11.0"
   }
   
   # s.resource_bundles = {

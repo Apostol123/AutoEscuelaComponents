@@ -8,7 +8,14 @@
 import Foundation
 
 public class TestClass {
+    public init() {
+        
+    }
   public  func doThing() {
+        
+    }
+    
+    public func doMoreThings() {
         
     }
 }

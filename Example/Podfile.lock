@@ -1,5 +1,5 @@
 PODS:
-  - AutoEscuelaComponents (0.1.1)
+  - AutoEscuelaComponents (0.2.0)
 
 DEPENDENCIES:
   - AutoEscuelaComponents (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AutoEscuelaComponents: 3fbc4653222c990d909a7371143ce842de05d4d3
+  AutoEscuelaComponents: 2563d637aa74e65f1ec251ab3bf63188d8bbb0a0
 
 PODFILE CHECKSUM: 2cb685f468f22bef248ee1aa2482ca7652eaac4e
 
