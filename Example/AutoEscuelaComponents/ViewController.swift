@@ -10,8 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+    let demoViewControllers = [ActionButtonViewController()]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        configureNaviationController()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,5 +27,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func configureNaviationController() {
+        self.title = "Demo List View Controller"
+    }
+}
+
+extension  ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        demoViewControllers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier:"customCell" , for: indexPath)
+        
+        cell.textLabel?.text = demoViewControllers[indexPath.row].demoTitle
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(demoViewControllers[indexPath.row], animated: true)
+    }
+    
 }
 
