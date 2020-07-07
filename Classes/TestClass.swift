@@ -18,4 +18,8 @@ public class TestClass {
     public func doMoreThings() {
         
     }
+    
+    public func doMoreThingsForvever() {
+        
+    }
 }

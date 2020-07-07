@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import AutoEscuelaComponents
 
 class ActionButtonViewController: UIViewController {
     
     let demoTitle = "ActionButtonViewController"
 
+    @IBOutlet var actionButton: ActionButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .red
+        actionButton.configure(title: "Mi Button", color: .blue, action: { print("Hola mundo")})
         // Do any additional setup after loading the view.
     }
 

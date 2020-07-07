@@ -1,16 +1,28 @@
 PODS:
-  - AutoEscuelaComponents (0.2.0)
+  - AutoEscuelaComponents (1.0.19):
+    - Reusable (~> 4.1.1)
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
 
 DEPENDENCIES:
   - AutoEscuelaComponents (from `../`)
+  - Reusable
+
+SPEC REPOS:
+  trunk:
+    - Reusable
 
 EXTERNAL SOURCES:
   AutoEscuelaComponents:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AutoEscuelaComponents: 2563d637aa74e65f1ec251ab3bf63188d8bbb0a0
+  AutoEscuelaComponents: b97cd9cf085fa52807fe044ba022c66f5f800ad4
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
 
-PODFILE CHECKSUM: 2cb685f468f22bef248ee1aa2482ca7652eaac4e
+PODFILE CHECKSUM: 1cb55d14f5ac393642bd81f00ea3ff4e8dc1773d
 
 COCOAPODS: 1.9.1
