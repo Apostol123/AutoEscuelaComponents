@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DemoListViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     let demoViewControllers = [ActionButtonViewController()]
     
     override func viewDidLoad() {
@@ -32,7 +31,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension  ViewController: UITableViewDelegate, UITableViewDataSource {
+extension  DemoListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         demoViewControllers.count
     }

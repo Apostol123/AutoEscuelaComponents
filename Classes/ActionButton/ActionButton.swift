@@ -46,7 +46,6 @@ public class ActionButton: UIView, NibOwnerLoadable{
         
     }
     
-    
     @objc func onClickButton() {
         if let action = action {
             action()
