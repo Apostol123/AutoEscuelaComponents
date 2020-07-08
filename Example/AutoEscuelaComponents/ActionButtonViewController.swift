@@ -16,8 +16,7 @@ class ActionButtonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
-        actionButton.configure(title: "Mi Button", color: .blue, action: { print("Hola mundo")})
+        actionButton.configure(title: "Mi Button", action: { print("Hola mundo")})
         // Do any additional setup after loading the view.
     }
 

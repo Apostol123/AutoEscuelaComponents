@@ -35,12 +35,15 @@ public class ActionButton: UIView, NibOwnerLoadable{
         self.loadNibContent()
     }
    
-    public func configure(title: String, color: UIColor, action: (() -> Void)?) {
-        self.button.titleLabel?.text = title
-        self.button.tintColor = color
+    public func configure(title: String, action: (() -> Void)?) {
+        self.button.titleLabel?.textColor = .white
+        self.button.setTitle(title, for: .normal)
+        self.button.backgroundColor = UIColor(hex: "#6D58FF")
         self.action = action
         self.button.addTarget(self, action: #selector(onClickButton), for: .touchUpInside)
-            self.tintColor = .red
+        self.layer.cornerRadius = 10
+        self.clipsToBounds = true
+        
     }
     
     

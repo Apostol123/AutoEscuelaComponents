@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AutoEscuelaComponents'
-  s.version          = '1.0.19'
+  s.version          = '1.0.23'
   s.summary          = 'A short description of AutoEscuelaComponents.'
 
 # This description is used to generate tags and improve search results.
