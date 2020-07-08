@@ -19,7 +19,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Th-cH-oTW">
-                    <rect key="frame" x="0.0" y="0.0" width="546" height="114"/>
+                    <rect key="frame" x="16" y="16" width="514" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="449-5X-8Xv"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,10 +31,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="1Th-cH-oTW" secondAttribute="trailing" id="0LH-Eh-B9x"/>
-                <constraint firstItem="1Th-cH-oTW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VN5-nf-TPO"/>
-                <constraint firstAttribute="bottom" secondItem="1Th-cH-oTW" secondAttribute="bottom" id="g0D-0o-B8Q"/>
-                <constraint firstItem="1Th-cH-oTW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qke-BJ-lLg"/>
+                <constraint firstItem="1Th-cH-oTW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="42I-hM-jF5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Th-cH-oTW" secondAttribute="trailing" constant="16" id="Fau-nw-L8i"/>
+                <constraint firstItem="1Th-cH-oTW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Rpw-Wh-Uus"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

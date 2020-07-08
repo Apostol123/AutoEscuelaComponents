@@ -41,8 +41,8 @@ public class ActionButton: UIView, NibOwnerLoadable{
         self.button.backgroundColor = UIColor(hex: "#6D58FF")
         self.action = action
         self.button.addTarget(self, action: #selector(onClickButton), for: .touchUpInside)
-        self.layer.cornerRadius = 10
-        self.clipsToBounds = true
+        self.button.layer.cornerRadius = 10
+        self.button.clipsToBounds = true
         
     }
     
