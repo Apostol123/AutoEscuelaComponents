@@ -7,28 +7,47 @@
 
 import UIKit
 
-public class ListItemView: UIView {
-    public var listItemText: UITextField
+public class CustomTextField: UITextField {
+    public weak var customDelegate: CustomTextFieldPorotocol?
+}
+
+public class ListItemView: UIView, CustomTextFieldPorotocol{
+    
+    public var listItemText: CustomTextField
     var errorLabel: UILabel?
+    var borderView: UIView?
+    var stackView: UIStackView = {
+        let stackView = UIStackView(frame: .zero)
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        return stackView
+    }()
     
     public  override init(frame: CGRect) {
-        listItemText =  UITextField(frame: .zero)
+        listItemText =  CustomTextField(frame: .zero)
         super.init(frame: frame)
+        listItemText.customDelegate = self
+        self.fill(view: stackView,edgeInset: UIEdgeInsets(top: 16, left: -16, bottom: 0, right:-16))
     }
     
     public func configureLabel(text: String?, hint: String?) {
-        listItemText.frame =  CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         listItemText.font = UIFont(name: "Avenir Next", size: 20)
         listItemText.textColor = .black
         listItemText.text = text
-        listItemText.layer.borderWidth = 3
-        listItemText.layer.borderColor = UIColor.black.cgColor
+        borderView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
+        
+        borderView?.backgroundColor = .white
+        borderView?.layer.borderWidth = 3
+        borderView?.layer.cornerRadius = 5
+        borderView?.layer.borderColor = UIColor.black.cgColor
+        borderView?.fill(view: listItemText,edgeInset: UIEdgeInsets(top: 8, left: -8, bottom: 8, right: -8))
         
         if let hint = hint {
             setUpHint(hint: hint)
         }
-       
-        self.fill(view: listItemText, edgeInset: UIEdgeInsets(top: 16 , left: -16, bottom: self.layoutMargins.bottom , right: -16))
+        
+        stackView.addArrangedSubview(borderView!)
+        
     }
     
     func setUpHint(hint: String) {
@@ -41,17 +60,7 @@ public class ListItemView: UIView {
         errorLabel?.text = errorText
         errorLabel?.font = UIFont(name: "Avenir Next", size: 16)
         errorLabel?.textColor = .red
-
-        self.addSubview(errorLabel!)
-        errorLabel?.translatesAutoresizingMaskIntoConstraints = false
-        errorLabel?.topAnchor.constraint(equalTo: listItemText.bottomAnchor, constant: 8).isActive = true
-        errorLabel?.leadingAnchor.constraint(equalTo: listItemText.leadingAnchor, constant: 16).isActive = true
-        errorLabel?.trailingAnchor.constraint(equalTo: listItemText.trailingAnchor, constant: -16).isActive = true
-        errorLabel?.numberOfLines = 0
-        errorLabel?.layer.borderWidth = 1
-        errorLabel?.layer.borderColor = UIColor.green.cgColor
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.red.cgColor
+        stackView.addArrangedSubview(errorLabel!)
     }
     
     
@@ -68,9 +77,13 @@ public class ListItemView: UIView {
     
     public func clearErrorLabel() {
         if let errorLabel = errorLabel {
-            self.willRemoveSubview(errorLabel)
-            errorLabel.removeFromSuperview()
+            stackView.removeArrangedSubview(errorLabel)
             self.layoutIfNeeded()
         }
     }
+}
+
+public protocol CustomTextFieldPorotocol: class {
+    func clearHint()
+    func clearErrorLabel()
 }

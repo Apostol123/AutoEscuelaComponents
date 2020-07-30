@@ -11,7 +11,7 @@ import UIKit
 class DemoListViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-    let demoViewControllers = [ActionButtonViewController()]
+    let demoViewControllers = [ActionButtonViewController(), LabelsDemoViewController()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,8 @@ extension  DemoListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"customCell" , for: indexPath)
         
-        cell.textLabel?.text = demoViewControllers[indexPath.row].demoTitle
+        let title = demoViewControllers[indexPath.row].title
+        cell.textLabel?.text = title
         return cell
     }
     
@@ -49,3 +50,6 @@ extension  DemoListViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+public protocol DemoTitle {
+     var demoTitle: String {get set}
+}
