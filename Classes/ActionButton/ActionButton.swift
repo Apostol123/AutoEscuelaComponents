@@ -10,7 +10,7 @@ import Reusable
 
 public class ActionButton: UIView, NibOwnerLoadable{
 
-    @IBOutlet var button: UIButton!
+    @IBOutlet public var button: UIButton!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

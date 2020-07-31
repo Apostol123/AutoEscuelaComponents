@@ -19,31 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPt-NN-OH3">
-                    <rect key="frame" x="0.0" y="44" width="414" height="150"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-i9-dgT" customClass="ActionButton" customModule="AutoEscuelaComponents">
-                            <rect key="frame" x="0.0" y="30" width="200" height="120"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="120" id="3K8-YI-D6O"/>
-                                <constraint firstAttribute="width" constant="200" id="3kB-SU-sPT"/>
-                            </constraints>
-                        </view>
-                    </subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-i9-dgT" customClass="ActionButton" customModule="AutoEscuelaComponents">
+                    <rect key="frame" x="16" y="60" width="382" height="120"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="j0k-i9-dgT" firstAttribute="leading" secondItem="cPt-NN-OH3" secondAttribute="leading" id="8su-Z8-ebW"/>
-                        <constraint firstAttribute="height" constant="150" id="P7v-hE-arA"/>
-                        <constraint firstAttribute="bottom" secondItem="j0k-i9-dgT" secondAttribute="bottom" id="WN8-Px-EgA"/>
+                        <constraint firstAttribute="height" constant="120" id="BrI-b5-0Mt"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="cPt-NN-OH3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="C6d-6b-yCi"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cPt-NN-OH3" secondAttribute="trailing" id="ZRg-ly-OkH"/>
-                <constraint firstItem="cPt-NN-OH3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b0B-Id-cBd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j0k-i9-dgT" secondAttribute="trailing" constant="16" id="CVV-Ab-4GA"/>
+                <constraint firstItem="j0k-i9-dgT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="OLe-qE-zZG"/>
+                <constraint firstItem="j0k-i9-dgT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="h6G-r7-dyA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="97.767857142857139"/>
