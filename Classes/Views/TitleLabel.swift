@@ -1,5 +1,5 @@
 //
-//  TitileLabel.swift
+//  TitleLabel.swift
 //  AutoEscuelaComponents
 //
 //  Created by user159106 on 7/31/20.
