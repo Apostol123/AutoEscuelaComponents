@@ -38,7 +38,7 @@ public class ActionButton: UIView, NibOwnerLoadable{
     public func configure(title: String, action: (() -> Void)?) {
         self.button.titleLabel?.textColor = .white
         self.button.setTitle(title, for: .normal)
-        self.button.backgroundColor = UIColor(hex: "#6D58FF")
+        self.button.backgroundColor = AutoEscuelaColors.darkGreen
         self.action = action
         self.button.addTarget(self, action: #selector(onClickButton), for: .touchUpInside)
         self.button.layer.cornerRadius = 10
