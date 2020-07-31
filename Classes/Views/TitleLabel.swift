@@ -8,10 +8,10 @@
 import UIKit
 
 public class CustomTextField: UITextField {
-    public weak var customDelegate: CustomTextFieldPorotocol?
+    public weak var customDelegate: CustomTextFieldProtocol?
 }
 
-public class ListItemView: UIView, CustomTextFieldPorotocol{
+public class ListItemView: UIView, CustomTextFieldProtocol{
     
     public var listItemText: CustomTextField
     var errorLabel: UILabel?
@@ -83,7 +83,7 @@ public class ListItemView: UIView, CustomTextFieldPorotocol{
     }
 }
 
-public protocol CustomTextFieldPorotocol: class {
+public protocol CustomTextFieldProtocol: class {
     func clearHint()
     func clearErrorLabel()
 }
