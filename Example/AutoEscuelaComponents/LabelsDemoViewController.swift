@@ -19,6 +19,18 @@ public class LabelsDemoViewController: UIViewController {
         return customView
     }()
     
+    lazy var titleLabel: TitleLabel = {
+        let titleLabel = TitleLabel(frame: .zero)
+        titleLabel.configure(text: "My text")
+        return titleLabel
+    }()
+    
+    lazy var titleLabelContainer: UIView = {
+        let view = UIView(frame: .zero)
+        view.fill(view: titleLabel,edgeInset: UIEdgeInsets(top: 16, left: -16, bottom: 0, right: 16))
+        return view
+    }()
+    
     lazy var listItemTextField: ListItemView = {
         let listItemTextField = ListItemView(frame: .zero)
         listItemTextField.configureLabel(text: "Demo text", hint: "THis is my hint")
@@ -85,6 +97,7 @@ public class LabelsDemoViewController: UIViewController {
         
         freeSpaceView.backgroundColor = UIColor.red
         stackView.axis = .vertical
+        stackView.addArrangedSubview(titleLabelContainer)
         stackView.addArrangedSubview(listItemTextfield)
         stackView.addArrangedSubview(listItemTextField1Container)
         stackView.addArrangedSubview(button)
