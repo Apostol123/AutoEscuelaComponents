@@ -1,5 +1,5 @@
 PODS:
-  - AutoEscuelaComponents (3.0.1):
+  - AutoEscuelaComponents (3.0.2):
     - Reusable (~> 4.1.1)
   - Reusable (4.1.1):
     - Reusable/Storyboard (= 4.1.1)
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AutoEscuelaComponents: 75ab9f1ba5406ce5d0197ef72a76544af9b331e6
+  AutoEscuelaComponents: 1bcbf6ba88bd60625711e05ac207ca87a6f81996
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
 
 PODFILE CHECKSUM: 1cb55d14f5ac393642bd81f00ea3ff4e8dc1773d
