@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Th-cH-oTW">
-                    <rect key="frame" x="16" y="16" width="514" height="60"/>
+                    <rect key="frame" x="16" y="4" width="514" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="449-5X-8Xv"/>
                     </constraints>
@@ -33,7 +33,7 @@
             <constraints>
                 <constraint firstItem="1Th-cH-oTW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="42I-hM-jF5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Th-cH-oTW" secondAttribute="trailing" constant="16" id="Fau-nw-L8i"/>
-                <constraint firstItem="1Th-cH-oTW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Rpw-Wh-Uus"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Th-cH-oTW" secondAttribute="bottom" constant="16" id="bHa-4b-Rf8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
