@@ -57,6 +57,7 @@ public class ListItemView: UIView, CustomTextFieldProtocol{
     
     public func setUpIsError(errorText: String) {
         errorLabel = UILabel(frame: CGRect(x: 0, y: 0, width: listItemText.frame.width, height: listItemText.frame.height))
+        errorLabel?.isHidden = false
         errorLabel?.text = errorText
         errorLabel?.font = UIFont(name: "Avenir Next", size: 16)
         errorLabel?.textColor = .red
@@ -78,6 +79,7 @@ public class ListItemView: UIView, CustomTextFieldProtocol{
     public func clearErrorLabel() {
         if let errorLabel = errorLabel {
             stackView.removeArrangedSubview(errorLabel)
+            errorLabel.isHidden = true
             self.layoutIfNeeded()
         }
     }
