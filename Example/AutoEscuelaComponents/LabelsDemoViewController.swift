@@ -11,10 +11,10 @@ import AutoEscuelaComponents
 
 public class LabelsDemoViewController: UIViewController {
     
-   public  lazy  var listItemTextfield: UIView = {
+    public  lazy  var listItemTextfield: UIView = {
         var customView = UIView(frame: .zero)
         let titleLabel = ListItemView(frame: .zero)
-       
+        
         customView.fill(view: listItemTextField)
         return customView
     }()
@@ -75,16 +75,16 @@ public class LabelsDemoViewController: UIViewController {
     }
     
     @objc func resetTextField() {
-        listItemTextField.listItemText.customDelegate?.clearHint()
-        listItemTextField.listItemText.customDelegate?.clearErrorLabel()
+        listItemTextField.clearHint()
+        listItemTextField.clearErrorLabel()
         errorIsShown = false
     }
     
     @objc func resetTextField1() {
-           listItemTextField1.listItemText.customDelegate?.clearHint()
-           listItemTextField1.listItemText.customDelegate?.clearErrorLabel()
+        listItemTextField1.clearHint()
+        listItemTextField1.clearErrorLabel()
         errorIsShown = false
-       }
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,11 +115,11 @@ public class LabelsDemoViewController: UIViewController {
     
     func toggleError() {
         if errorIsShown {
-             errorIsShown = false
+            errorIsShown = false
             listItemTextField1.clearErrorLabel()
-           
+            
         } else {
-             errorIsShown = true
+            errorIsShown = true
             listItemTextField1.setUpIsError(errorText: "Demo Error")
         }
     }

@@ -8,11 +8,10 @@
 import UIKit
 
 public class CustomTextField: UITextField {
-    public weak var customDelegate: CustomTextFieldProtocol?
 }
 
-public class ListItemView: UIView, CustomTextFieldProtocol{
-    
+public class ListItemView: UIView {
+  
     public var listItemText: CustomTextField
     var errorLabel: UILabel?
     var borderView: UIView?
@@ -26,7 +25,6 @@ public class ListItemView: UIView, CustomTextFieldProtocol{
     public  override init(frame: CGRect) {
         listItemText =  CustomTextField(frame: .zero)
         super.init(frame: frame)
-        listItemText.customDelegate = self
         self.fill(view: stackView,edgeInset: UIEdgeInsets(top: 16, left: -16, bottom: 0, right:-16))
     }
     
@@ -50,17 +48,21 @@ public class ListItemView: UIView, CustomTextFieldProtocol{
         
     }
     
-    func setUpHint(hint: String) {
+   public  func setUpHint(hint: String) {
         listItemText.text = hint
         listItemText.textColor = .gray
     }
     
     public func setUpIsError(errorText: String) {
-        errorLabel = UILabel(frame: CGRect(x: 0, y: 0, width: listItemText.frame.width, height: listItemText.frame.height))
-        errorLabel?.text = errorText
-        errorLabel?.font = UIFont(name: "Avenir Next", size: 16)
-        errorLabel?.textColor = .red
-        stackView.addArrangedSubview(errorLabel!)
+        if let _ = errorLabel {
+            
+        } else {
+            errorLabel = UILabel(frame: CGRect(x: 0, y: 0, width: listItemText.frame.width, height: listItemText.frame.height))
+            errorLabel?.text = errorText
+            errorLabel?.font = UIFont(name: "Avenir Next", size: 16)
+            errorLabel?.textColor = .red
+            stackView.addArrangedSubview(errorLabel!)
+        }
     }
     
     
@@ -78,13 +80,10 @@ public class ListItemView: UIView, CustomTextFieldProtocol{
     public func clearErrorLabel() {
         if let errorLabel = errorLabel {
             stackView.removeArrangedSubview(errorLabel)
-            errorLabel.removeFromSuperview()
+            self.errorLabel?.removeFromSuperview()
+            self.errorLabel = nil
             self.layoutIfNeeded()
         }
     }
 }
 
-public protocol CustomTextFieldProtocol: class {
-    func clearHint()
-    func clearErrorLabel()
-}
