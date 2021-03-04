@@ -11,6 +11,16 @@ public class CustomTextField: UITextField {
 }
 
 public class ListItemView: UIView {
+    
+    public var isEmpty: Bool {
+        get {
+            if let text = listItemText.text, !text.isEmpty {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
   
     public var listItemText: CustomTextField
     var errorLabel: UILabel?
@@ -28,10 +38,10 @@ public class ListItemView: UIView {
         self.fill(view: stackView,edgeInset: UIEdgeInsets(top: 16, left: -16, bottom: 0, right:-16))
     }
     
-    public func configureLabel(text: String?, hint: String?) {
+    public func configureLabel(text: String?, placeholder: String?) {
         listItemText.font = UIFont(name: "Avenir Next", size: 20)
         listItemText.textColor = .black
-        listItemText.text = text
+        listItemText.placeholder = placeholder
         borderView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         
         borderView?.backgroundColor = .white
@@ -39,18 +49,10 @@ public class ListItemView: UIView {
         borderView?.layer.cornerRadius = 5
         borderView?.layer.borderColor = UIColor.black.cgColor
         borderView?.fill(view: listItemText,edgeInset: UIEdgeInsets(top: 8, left: -8, bottom: 8, right: -8))
-        
-        if let hint = hint {
-            setUpHint(hint: hint)
-        }
+    
         
         stackView.addArrangedSubview(borderView!)
         
-    }
-    
-   public  func setUpHint(hint: String) {
-        listItemText.text = hint
-        listItemText.textColor = .gray
     }
     
     public func setUpIsError(errorText: String) {
@@ -70,12 +72,6 @@ public class ListItemView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func clearHint() {
-        if listItemText.textColor == UIColor.gray {
-            listItemText.text = ""
-            listItemText.textColor = UIColor.black
-        }
-    }
     
     public func clearErrorLabel() {
         if let errorLabel = errorLabel {
@@ -85,5 +81,6 @@ public class ListItemView: UIView {
             self.layoutIfNeeded()
         }
     }
+    
 }
 

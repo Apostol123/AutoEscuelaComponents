@@ -33,7 +33,7 @@ public class LabelsDemoViewController: UIViewController {
     
     lazy var listItemTextField: ListItemView = {
         let listItemTextField = ListItemView(frame: .zero)
-        listItemTextField.configureLabel(text: "Demo text", hint: "THis is my hint")
+        listItemTextField.configureLabel(text: "Demo text", placeholder: "THis is my hint")
         listItemTextField.setUpIsError(errorText: "Demo Error")
         return listItemTextField
     }()
@@ -48,7 +48,7 @@ public class LabelsDemoViewController: UIViewController {
     
     lazy var listItemTextField1: ListItemView = {
         let listItemTextField = ListItemView(frame: .zero)
-        listItemTextField.configureLabel(text: "Demo text", hint: "THis is my hint")
+        listItemTextField.configureLabel(text: "Demo text", placeholder: "THis is my hint")
         return listItemTextField
     }()
     
@@ -75,13 +75,11 @@ public class LabelsDemoViewController: UIViewController {
     }
     
     @objc func resetTextField() {
-        listItemTextField.clearHint()
         listItemTextField.clearErrorLabel()
         errorIsShown = false
     }
     
     @objc func resetTextField1() {
-        listItemTextField1.clearHint()
         listItemTextField1.clearErrorLabel()
         errorIsShown = false
     }
