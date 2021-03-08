@@ -14,7 +14,7 @@ public class ListItemView: UIView {
     
     public var isEmpty: Bool {
         get {
-            if let text = listItemText.text, !text.isEmpty {
+            if let text = listItemText.text, text.isEmpty {
                 return true
             } else {
                 return false
@@ -38,10 +38,15 @@ public class ListItemView: UIView {
         self.fill(view: stackView,edgeInset: UIEdgeInsets(top: 16, left: -16, bottom: 0, right:-16))
     }
     
-    public func configureLabel(text: String?, placeholder: String?) {
+    public func configureLabel(text: String?, placeholder: String?, isSecure: Bool? = nil) {
         listItemText.font = UIFont(name: "Avenir Next", size: 20)
         listItemText.textColor = .black
         listItemText.placeholder = placeholder
+        listItemText.text = text
+        if let isSecure = isSecure {
+            listItemText.isSecureTextEntry = isSecure
+        }
+
         borderView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         
         borderView?.backgroundColor = .white
